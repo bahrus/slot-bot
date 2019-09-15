@@ -15,12 +15,12 @@ export class SlotBot extends HTMLElement{
                 if(el.nodeType === 1){
                     const clone = el.cloneNode(true) as HTMLElement;
                     const destSlot = this.getAttribute(dest_slot);
-                    if(destSlot){
+                    if(destSlot !== null){
                         clone.setAttribute('slot', destSlot);
                     }else{
                         clone.removeAttribute('slot');
                     }
-                    ns.appendChild(el.cloneNode(true));
+                    ns.appendChild(clone);
                 }
                 
             });
