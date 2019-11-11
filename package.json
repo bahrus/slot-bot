@@ -8,11 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "trans-render": "0.0.131",
-    "xtal-element": "0.0.82"
+    "trans-render": "0.0.137",
+    "xtal-element": "0.0.90"
   },
   "devDependencies": {
-    "xtal-test": "0.0.20"
+    "xtal-test": "0.0.21"
   },
   "repository": {
     "type": "git",
