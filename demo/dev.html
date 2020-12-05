@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600&amp;display=swap">
+
 </head>
+
 <body>
-    
+    <xtal-timeline>
+        <h2>A clean timeline design, with animated links</h2>
+        <div class="timeline">
+            <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+                <div class="timeline__event__icon ">
+                    <i class="lni-cake"></i>
+
+                </div>
+                <div class="timeline__event__date">
+                    20-08-2019
+                </div>
+                <div class="timeline__event__content ">
+                    <div class="timeline__event__title">
+                        Birthday
+                    </div>
+                    <div class="timeline__event__description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
+                            asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut
+                            architecto harum quidem dolorem in!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+                <div class="timeline__event__icon">
+                    <i class="lni-burger"></i>
+
+                </div>
+                <div class="timeline__event__date">
+                    20-08-2019
+                </div>
+                <div class="timeline__event__content">
+                    <div class="timeline__event__title">
+                        Lunch
+                    </div>
+                    <div class="timeline__event__description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
+                            asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut
+                            architecto harum quidem dolorem in!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+                <div class="timeline__event__icon">
+                    <i class="lni-slim"></i>
+
+                </div>
+                <div class="timeline__event__date">
+                    20-08-2019
+                </div>
+                <div class="timeline__event__content">
+                    <div class="timeline__event__title">
+                        Exercise
+                    </div>
+                    <div class="timeline__event__description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
+                            asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut
+                            architecto harum quidem dolorem in!</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="timeline__event animated fadeInUp timeline__event--type1">
+                <div class="timeline__event__icon">
+                    <i class="lni-cake"></i>
+
+                </div>
+                <div class="timeline__event__date">
+                    20-08-2019
+                </div>
+                <div class="timeline__event__content">
+                    <div class="timeline__event__title">
+                        Birthday
+                    </div>
+                    <div class="timeline__event__description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
+                            asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut
+                            architecto harum quidem dolorem in!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </xtal-timeline>
+    <!-- Use experimental import maps -->
+    <script defer src="../node_modules/es-module-shims/dist/es-module-shims.js"></script>
+    <script type="importmap-shim">
+    {
+        "imports": {
+        "xtal-element/": "../node_modules/xtal-element/",
+        "trans-render/": "../node_modules/trans-render/"
+        }
+    }
+    </script>
+    <!-- <script type="module" src="../p-d.js"></script> -->
+    <script  type="module-shim">
+        import './xtal-timeline.js';
+        import '../slot-bot.js';
+    </script>
 </body>
+
 </html>
