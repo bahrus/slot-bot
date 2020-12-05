@@ -53,7 +53,7 @@ const mainTemplate = createTemplate(/* html */`
   .timeline__event:nth-child(2n + 1) .timeline__event__content {
     border-radius: 6px 0 0 6px;
   }
-  .timeline__event:nth-child(2n + 1) .timeline__event__icon:before {
+  .timeline__event:nth-child(2n + 1) .icon:before {
     content: "";
     width: 2px;
     height: 160px;
@@ -68,7 +68,7 @@ const mainTemplate = createTemplate(/* html */`
     -webkit-animation: fillTop 2s forwards 4s ease-in-out;
             animation: fillTop 2s forwards 4s ease-in-out;
   }
-  .timeline__event:nth-child(2n + 1) .timeline__event__icon:after {
+  .timeline__event:nth-child(2n + 1) .icon:after {
     content: "";
     width: 100%;
     height: 2px;
@@ -110,7 +110,7 @@ const mainTemplate = createTemplate(/* html */`
     padding: 0 20px;
     border-radius: 6px 0 0 6px;
   }
-  .timeline__event__icon {
+  .icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,10 +126,10 @@ const mainTemplate = createTemplate(/* html */`
     height: 40px;
     position: relative;
   }
-  .timeline__event__icon i {
+  .icon i {
     font-size: 32px;
   }
-  .timeline__event__icon:before {
+  .icon:before {
     content: "";
     width: 2px;
     height: 160px;
@@ -143,7 +143,7 @@ const mainTemplate = createTemplate(/* html */`
     -webkit-animation: fillTop 2s forwards 4s ease-in-out;
             animation: fillTop 2s forwards 4s ease-in-out;
   }
-  .timeline__event__icon:after {
+  .icon:after {
     content: "";
     width: 100%;
     height: 2px;
@@ -167,14 +167,14 @@ const mainTemplate = createTemplate(/* html */`
     color: #87bbfe;
     background: #555ac0;
   }
-  .timeline__event--type2:nth-child(2n + 1) .timeline__event__icon:before, .timeline__event--type2:nth-child(2n + 1) .timeline__event__icon:after {
+  .timeline__event--type2:nth-child(2n + 1) .icon:before, .timeline__event--type2:nth-child(2n + 1) .icon:after {
     background: #87bbfe;
   }
-  .timeline__event--type2 .timeline__event__icon {
+  .timeline__event--type2 .icon {
     background: #87bbfe;
     color: #555ac0;
   }
-  .timeline__event--type2 .timeline__event__icon:before, .timeline__event--type2 .timeline__event__icon:after {
+  .timeline__event--type2 .icon:before, .timeline__event--type2 .icon:after {
     background: #87bbfe;
   }
   .timeline__event--type2 .timeline__event__title {
@@ -187,20 +187,20 @@ const mainTemplate = createTemplate(/* html */`
     color: #aff1b6;
     background-color: #24b47e;
   }
-  .timeline__event--type3:nth-child(2n + 1) .timeline__event__icon:before, .timeline__event--type3:nth-child(2n + 1) .timeline__event__icon:after {
+  .timeline__event--type3:nth-child(2n + 1) .icon:before, .timeline__event--type3:nth-child(2n + 1) .icon:after {
     background: #aff1b6;
   }
-  .timeline__event--type3 .timeline__event__icon {
+  .timeline__event--type3 .icon {
     background: #aff1b6;
     color: #24b47e;
   }
-  .timeline__event--type3 .timeline__event__icon:before, .timeline__event--type3 .timeline__event__icon:after {
+  .timeline__event--type3 .icon:before, .timeline__event--type3 .icon:after {
     background: #aff1b6;
   }
   .timeline__event--type3 .timeline__event__title {
     color: #24b47e;
   }
-  .timeline__event:last-child .timeline__event__icon:before {
+  .timeline__event:last-child .icon:before {
     content: none;
   }
   
@@ -212,13 +212,13 @@ const mainTemplate = createTemplate(/* html */`
     .timeline__event__content {
       width: 100%;
     }
-    .timeline__event__icon {
+    .icon {
       border-radius: 6px 6px 0 0;
       width: 100%;
       margin: 0;
       box-shadow: none;
     }
-    .timeline__event__icon:before, .timeline__event__icon:after {
+    .icon:before, .icon:after {
       display: none;
     }
     .timeline__event__date {
@@ -233,7 +233,7 @@ const mainTemplate = createTemplate(/* html */`
       border-radius: 0;
       padding: 20px;
     }
-    .timeline__event:nth-child(2n + 1) .timeline__event__icon {
+    .timeline__event:nth-child(2n + 1) .icon {
       border-radius: 6px 6px 0 0;
       margin: 0;
     }
