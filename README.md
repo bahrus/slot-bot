@@ -18,7 +18,7 @@ slot-bot is the equivalent of the Centre Pompidou for web components.
 
 Slots are great when they do the job.  However, the ability to style the slotted content is [quite limited](https://developers.google.com/web/fundamentals/web-components/shadowdom#stylinglightdom) -- only top level child nodes can be styled.
 
-And cloning a DOM tree has a cost, of course.
+Granted, cloning a DOM tree has a cost.
 
 In many cases, use of this component may provide a straightforward "first draft" or prototype of a component.  For example, if you look at the [sample markup](https://github.com/bahrus/slot-bot/blob/baseline/demo/dev.html) for a timeline, one can see that some of the class names suggest ways to break down the monolith component into sub-components -- a component for an event, for example, would probably be sufficient for true slotting to be sufficient.  Doing so may tend to take a bit more time than at first anticipated, because as the Shadow DOM is broken down logically, the css rules will need to be adjusted accordingly.  
 
