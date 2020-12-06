@@ -14,7 +14,7 @@ slot-bot is the equivalent of the Centre Pompidou for web components.
 
 ## Is this abusing web standards?
 
-Slots were built with the specific intent of ferrying snippets of content inside the Shadow DOM.  Aren't you trampling all over the spirit of how web components are supposed to work?
+>Slots were built with the specific intent of ferrying snippets of content inside the Shadow DOM.  Aren't you trampling all over the spirit of how web components are supposed to work?
 
 Slots are great when they do the job.  However, the ability to style the slotted content is [quite limited](https://developers.google.com/web/fundamentals/web-components/shadowdom#stylinglightdom) -- only top level child nodes can be styled.
 
