@@ -6,7 +6,17 @@ Wolfe__schlegel__­stein_hausen­__berger--dorff--­welche--­vor­altern--­war
 
 or fights over how [many angels can dance on the head of a pin](https://stackoverflow.com/a/54075051/3320028).
 
-[TODO]  Allow for transformations on the nodes after cloning.
+## Adjusting the clone
+
+We can adjust the cloned node by subscribing to the non bubbling event 'cloned-node':
+
+```JavaScript
+mySlotBot.addEventListener('cloned-node', e => {
+    const clone = e.detail.clone;
+    const lightChild = e.detail.lightChild;
+    //modify the clone programmatically, or use a declarative-ish library like trans-render
+});
+```
 
 slot-bot is the equivalent of the Centre Pompidou for web components.
 

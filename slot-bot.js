@@ -11,6 +11,12 @@ export class SlotBot extends HTMLElement {
             sE.assignedNodes().forEach(el => {
                 if (el.nodeType === 1) {
                     const clone = el.cloneNode(true);
+                    this.dispatchEvent(new CustomEvent('cloned-node', {
+                        detail: {
+                            clone: clone,
+                            lightChild: el
+                        }
+                    }));
                     const destSlot = this.getAttribute(dest_slot);
                     if (destSlot !== null) {
                         clone.setAttribute('slot', destSlot);
