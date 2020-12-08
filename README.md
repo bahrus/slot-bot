@@ -45,3 +45,10 @@ For this to work, three tags are needed within the ShadowDOM:
 slot-bot acts as the "transfer medium" between the slot tag above it, and the placeholder DOM tag/node beneath it.
 
 
+## Mutations to the light children
+
+If nodes are added or removed at the top level of the light children, the shadow content will synchronize.
+
+However, if mutations are made inside the light children, these will not be picked up.
+
+The container component can, though, add a mutation observer to its light children, and call SlotBot's cloneSlot() method.

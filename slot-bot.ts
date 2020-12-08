@@ -4,7 +4,7 @@ import {ISlotBot} from './types.d.js';
 const dest_slot = 'dest-slot';
 
 export class SlotBot extends HTMLElement implements ISlotBot{
-    static get is(){return 'slot-bot';}
+    static is = 'slot-bot';
 
     cloneSlot(){
         const sE = this.previousElementSibling as HTMLSlotElement;
@@ -38,3 +38,9 @@ export class SlotBot extends HTMLElement implements ISlotBot{
     }
 }
 define(SlotBot);
+
+declare global {
+    interface HTMLElementTagNameMap {
+        "slot-bot": SlotBot,
+    }
+}
