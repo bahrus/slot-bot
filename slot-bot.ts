@@ -1,8 +1,9 @@
 import {define} from 'trans-render/define.js';
+import {ISlotBot} from './types.d.js';
 
 const dest_slot = 'dest-slot';
 
-export class SlotBot extends HTMLElement{
+export class SlotBot extends HTMLElement implements ISlotBot{
     static get is(){return 'slot-bot';}
 
     cloneSlot(){

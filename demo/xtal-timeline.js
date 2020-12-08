@@ -281,11 +281,34 @@ const mainTemplate = createTemplate(/* html */ `
 <div id="content"></div>
 `);
 export class XtalTimeline extends HTMLElement {
-    static get is() { return 'xtal-timeline'; }
     constructor() {
         super();
         const shadowRoot = this.attachShadow({ mode: "open" });
         shadowRoot.appendChild(mainTemplate.content.cloneNode(true));
+    }
+    static get is() { return 'xtal-timeline'; }
+    onMutation(mutationsList, observer) {
+        // Use traditional 'for loops' for IE 11
+        // console.log(this);
+        // for(const mutation of mutationsList) {
+        //     if (mutation.type === 'childList') {
+        //         console.log('A child node has been added or removed.');
+        //     }
+        //     else if (mutation.type === 'attributes') {
+        //         console.log('The ' + mutation.attributeName + ' attribute was modified.');
+        //     }
+        // }
+        this.shadowRoot.querySelector('slot-bot').cloneSlot();
+    }
+    ;
+    connectedCallback() {
+        const config = { attributes: true, childList: true, subtree: true };
+        this._observer = new MutationObserver(this.onMutation.bind(this));
+        this._observer.observe(this, config);
+    }
+    disconnectedCallback() {
+        if (this._observer !== undefined)
+            this._observer.disconnect();
     }
 }
 define(XtalTimeline);

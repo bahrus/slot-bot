@@ -2,6 +2,7 @@ import {define} from 'trans-render/define.js';
 import {createTemplate} from 'trans-render/createTemplate.js';
 import {preemptiveImport} from 'xtal-sip/preemptiveImport.js';
 import '../slot-bot.js';
+import {ISlotBot} from '../types.d.js';
 const lineIcons = '//cdn.lineicons.com/1.0.1/LineIcons.min.css';
 preemptiveImport([lineIcons,,'//cdn.lineicons.com/1.0.1/LineIcons.min.css',,{cssScope: 'global'}]);
 const googleFonts = '//fonts.googleapis.com/css?family=Open+Sans:100,300,400,600&amp;display=swap';
@@ -282,11 +283,37 @@ const mainTemplate = createTemplate(/* html */`
 `)
 export class XtalTimeline extends HTMLElement{
   static get is(){return 'xtal-timeline';}
+  _observer: MutationObserver | undefined;
+
+  onMutation(mutationsList: MutationRecord[], observer: MutationObserver) {
+    // Use traditional 'for loops' for IE 11
+    // console.log(this);
+    // for(const mutation of mutationsList) {
+    //     if (mutation.type === 'childList') {
+    //         console.log('A child node has been added or removed.');
+    //     }
+    //     else if (mutation.type === 'attributes') {
+    //         console.log('The ' + mutation.attributeName + ' attribute was modified.');
+    //     }
+    // }
+    (this.shadowRoot!.querySelector('slot-bot') as ISlotBot).cloneSlot();
+};
   constructor(){
     super();
     const shadowRoot = this.attachShadow({mode: "open"});
     shadowRoot.appendChild(mainTemplate.content.cloneNode(true));
   }
+
+  connectedCallback(){
+    const config = { attributes: true, childList: true, subtree: true };
+    this._observer = new MutationObserver(this.onMutation.bind(this));
+    this._observer.observe(this, config);
+  }
+
+  disconnectedCallback(){
+    if(this._observer !== undefined) this._observer.disconnect();
+  }
+  
 } 
 
 define(XtalTimeline);
