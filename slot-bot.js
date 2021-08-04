@@ -6,22 +6,25 @@ export class SlotBot extends HTMLElement {
         const ns = this.nextElementSibling;
         ns.innerHTML = '';
         sE.assignedNodes().forEach(el => {
-            if (el.nodeType === 1) {
-                const clone = el.cloneNode(true);
-                this.dispatchEvent(new CustomEvent('cloned-node', {
-                    detail: {
-                        clone: clone,
-                        lightChild: el
+            switch (el.nodeType) {
+                case 1:
+                case 3:
+                    const clone = el.cloneNode(true);
+                    this.dispatchEvent(new CustomEvent('cloned-node', {
+                        detail: {
+                            clone: clone,
+                            lightChild: el
+                        }
+                    }));
+                    const destSlot = this.getAttribute(dest_slot);
+                    if (destSlot !== null) {
+                        clone.setAttribute('slot', destSlot);
                     }
-                }));
-                const destSlot = this.getAttribute(dest_slot);
-                if (destSlot !== null) {
-                    clone.setAttribute('slot', destSlot);
-                }
-                else {
-                    clone.removeAttribute('slot');
-                }
-                ns.appendChild(clone);
+                    else {
+                        clone.removeAttribute('slot');
+                    }
+                    ns.appendChild(clone);
+                    break;
             }
         });
     }
