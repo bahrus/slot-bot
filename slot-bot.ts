@@ -21,12 +21,15 @@ export class SlotBot extends HTMLElement implements ISlotBot{
                             lightChild: el
                         }
                     }));
-                    const destSlot = this.getAttribute(dest_slot);
-                    if(destSlot !== null){
-                        clone.setAttribute('slot', destSlot);
-                    }else{
-                        clone.removeAttribute('slot');
+                    if(el.nodeType === 1){
+                        const destSlot = this.getAttribute(dest_slot);
+                        if(destSlot !== null){
+                            clone.setAttribute('slot', destSlot);
+                        }else{
+                            clone.removeAttribute('slot');
+                        }
                     }
+
                     ns.appendChild(clone);
                     break;
             }
