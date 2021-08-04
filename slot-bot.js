@@ -1,4 +1,4 @@
-import { define } from 'trans-render/define.js';
+import { define } from 'xtal-element/lib/define.js';
 const dest_slot = 'dest-slot';
 export class SlotBot extends HTMLElement {
     cloneSlot() {
