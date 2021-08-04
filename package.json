@@ -1,7 +1,7 @@
 {
   "name": "slot-bot",
   "version": "0.0.6",
-  "description": "TBD",
+  "description": "slot-bot provides a way to declaratively \"ferry\" a replica of the light children into the Shadow DOM realm",
   "main": "slot-bot.js",
   "module": "slot-bot.js",
   "scripts": {
@@ -9,13 +9,12 @@
     "serve": "node node_modules/xtal-test/serve.js"
   },
   "dependencies": {
-    "trans-render": "0.0.269",
-    "xtal-element": "0.0.315"
+    "trans-render": "0.0.291",
+    "xtal-element": "0.0.419"
   },
   "devDependencies": {
-    "es-module-shims": "0.7.1",
-    "xtal-sip": "0.0.114",
-    "xtal-test": "0.0.48"
+    "xtal-sip": "0.0.117",
+    "xtal-test": "0.0.51"
   },
   "repository": {
     "type": "git",

@@ -1,13 +1,16 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"module":"esnext",
+		"target": "ESNext",
+		"module":"ESNext",
 		"sourceMap": false,
-		"experimentalDecorators": true,
+		"experimentalDecorators": false,
 		"strict": true,
 		"newLine": "LF",
 		"watch": true
 	},
+	"files": [
+		"slot-bot.ts"
+	],
 	"exclude":[
 		"build",
 		"bower_components",
