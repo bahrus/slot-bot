@@ -37,6 +37,7 @@ export class SlotBot extends HTMLElement implements ISlotBot{
     }
     connectedCallback(){
         this.style.display = 'none';
+        this.cloneSlot();
         this.previousElementSibling!.addEventListener('slotchange', (event: Event) => {
             this.cloneSlot();
         });
