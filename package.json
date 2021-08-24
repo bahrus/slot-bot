@@ -9,8 +9,7 @@
     "serve": "node node_modules/xtal-test/serve.js"
   },
   "dependencies": {
-    "trans-render": "0.0.291",
-    "xtal-element": "0.0.419"
+    "trans-render": "0.0.339"
   },
   "devDependencies": {
     "xtal-sip": "0.0.117",

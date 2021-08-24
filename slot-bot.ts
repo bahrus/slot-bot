@@ -1,4 +1,4 @@
-import {define} from 'xtal-element/lib/define.js';
+import {def} from 'trans-render/lib/def.js';
 import {ISlotBot} from './types.d.js';
 
 const dest_slot = 'dest-slot';
@@ -43,7 +43,7 @@ export class SlotBot extends HTMLElement implements ISlotBot{
         });
     }
 }
-define(SlotBot);
+def(SlotBot);
 
 declare global {
     interface HTMLElementTagNameMap {
