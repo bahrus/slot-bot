@@ -1,6 +1,6 @@
 {
   "name": "slot-bot",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "slot-bot provides a way to declaratively \"ferry\" a replica of the light children into the Shadow DOM realm",
   "main": "slot-bot.js",
   "module": "slot-bot.js",
