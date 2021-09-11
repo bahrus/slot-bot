@@ -1,6 +1,7 @@
 import { def } from 'trans-render/lib/def.js';
 const dest_slot = 'dest-slot';
 export class SlotBot extends HTMLElement {
+    static is = 'slot-bot';
     cloneSlot() {
         const sE = this.previousElementSibling;
         const ns = this.nextElementSibling;
@@ -38,5 +39,4 @@ export class SlotBot extends HTMLElement {
         });
     }
 }
-SlotBot.is = 'slot-bot';
 def(SlotBot);
