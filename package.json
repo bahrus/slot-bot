@@ -9,11 +9,12 @@
     "serve": "node node_modules/xtal-test/serve.js"
   },
   "dependencies": {
-    "trans-render": "0.0.398"
+    "trans-render": "0.0.422"
   },
   "devDependencies": {
     "xtal-sip": "0.0.117",
-    "xtal-test": "0.0.51"
+    "xtal-test": "0.0.51",
+    "xtal-timeline": "0.0.9"
   },
   "repository": {
     "type": "git",
