@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "xtal-sip": "0.0.117",
-    "xtal-test": "0.0.51",
+    "xtal-test": "0.0.57",
     "xtal-timeline": "0.0.9"
   },
   "repository": {
